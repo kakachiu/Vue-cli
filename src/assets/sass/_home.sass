@@ -1,0 +1,371 @@
+//header
+.heard
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 100vh
+  background-color: #F1EEEA
+  position: relative
+.logo
+  & a
+    display: block
+    width: 200px
+    height: 200px
+    background-image: url(../public/img/home_logo.png)
+    text-indent: 101%
+    white-space: nowrap
+    overflow: hidden
+hr
+  width: 50px
+  border: 2px solid #c6ae95
+  background-color: #c6ae95
+.subTitle
+  font-size: 20px
+  font-weight: 400
+  margin-bottom: 150px
+
+.menu
+  display: flex
+  justify-content: center
+  & li
+    margin-right: 20px
+    border-top: 1px solid
+    border-bottom: 1px solid
+    padding: 10px
+    position: relative
+    transition: width 0.5s
+    &:last-child
+      margin-right: 0px
+    & span
+      z-index: 2
+      display: block
+      position: relative
+      color: #343434
+      font-size: 18px
+      font-weight: 700
+      line-height: 22px
+      text-align: center
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      width: 0%
+      z-index: 1
+      opacity: 0
+      background-color: #c6ae95
+      transition: width 0.5s
+    &:hover
+      border-top: 1px solid #fff
+      border-bottom: 1px solid #fff
+      & span
+        color: #fff
+        font-weight: 500
+    &:hover::before
+      opacity: 1
+      width: 100%
+
+//往下箭頭提示
+.downArrow
+  position: absolute
+  bottom: 10px
+  width: 40px
+  height: 40px
+  border: 1px solid #c6ae95
+  border-radius: 50%
+  cursor: pointer
+  & i
+    position: relative
+    top: 30%
+    left: 50%
+    transform: translate(-50%,-50%)
+    font-size: 30px
+    color: #8f642c
+    transition: all 0.5s
+    animation: drop 2s infinite
+
+@keyframes drop
+  0%
+    top: 20%
+  100%
+    top: 50%
+    opacity: 0
+
+//中間文字
+.saying
+  background-color: #EEE8DF
+  height: 200px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  font-weight: bold
+  & h2
+    font-size: 40px
+    margin-bottom: 30px
+  & p
+    font-size: 25px
+    font-weight: 500
+    @include smallPhone
+      padding: 10px
+      font-size: 22px
+// 輪播    
+.carousel
+  background-color: #F1EEEA
+
+// 精選畫作
+.featuredPainting,.ArtPainter,.contactUs
+  background-color: #EEE8DF
+  padding: 30px 0px
+  .title
+    position: relative
+    margin-bottom: 50px
+  .twTitle
+    padding: 10px
+    width: 140px
+    height: 80px
+    color: #fff
+    background-color: #a07b4b
+    font-size: 55px
+    & span
+      position: absolute
+      font-size: 20px
+      margin-left: 5px
+  .enTitle
+    position: absolute
+    left: 65px
+    top: 40px
+    font-size: 60px
+    font-weight: bold
+    width: 190px
+    height: 70px
+    background-color: #fff
+    padding-left: 5px
+    & span
+      font-size: 30px
+.painting
+  display: flex
+  flex-wrap: wrap
+  & li
+    width: calc(100% / 3 - 15px)
+    margin-right: 20px
+    margin-bottom: 30px
+    box-shadow: 5px 5px 10px rgba(#A07B4B,0.3)
+    position: relative
+    border-radius: 4px
+    &:nth-child(3n)
+      margin-right: 0px
+    &:hover,&:active
+      .more
+        opacity: 1
+        padding: 10px 0px
+        border-top: 1px solid #fff
+        border-bottom: 1px solid #fff
+      .img
+        filter: brightness(0.5)
+    .img
+      transition: 0.5s
+      & img
+        object-fit: cover
+        width: 100%
+        height: 300px
+        border-radius: 4px 4px 0px 0px
+    .more
+      position: absolute
+      top: 30%
+      left: 50%
+      transform: translate(-50%,-50%)
+      font-size: 30px
+      color: #fff
+      opacity: 0
+      transition: 0.5s
+      &:hover,&:active
+        cursor: pointer
+    .tag
+      position: absolute
+      right: 10px
+      top: 10px
+      padding: 10px
+      border-radius: 8px
+      border: 1px solid #EEE8DF
+      color: #EEE8DF
+      background-color: #A07B4B
+      font-weight: 600
+      font-size: 18px
+
+    .content
+      padding: 25px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 200px
+      @include smallPhone
+        height: auto
+  & h2
+    font-size: 30px
+    font-weight: bold
+    margin-bottom: 20px
+    @include smallPhone
+      font-size: 20px
+    p
+      margin-bottom: 40px
+
+.addtoCart
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .price
+    font-weight: bold
+    font-size: 25px
+    @include smallPhone
+      font-size: 20px
+  .btn
+    border: 1px solid #A07B4B
+    border-radius: 4px
+    padding: 10px
+    color: #A07B4B
+    transition: 0.5s
+    &:hover,&:active
+      color: #fff
+      background-color: #A07B4B
+      cursor: pointer
+
+@media (max-width: 980px)
+  .painting
+    & li
+      width: calc(100% / 2 - 10px)
+      &:nth-child(3n)
+        margin-right: 20px
+      &:nth-child(2n)
+        margin-right: 0px
+
+@media (max-width: 767px)
+  .painting
+    & li
+      width: 100%
+      &:nth-child(odd)
+        margin-right: 0px
+
+// 藝廊畫家
+.ArtPainter
+  background-color: #F1EEEA
+  .art
+    display: flex
+    @include pad
+      flex-wrap: wrap
+    & li
+      border: 5px solid #fff
+      width: calc(100% / 4)
+      margin-right: 20px
+      position: relative
+      margin-bottom: 30px
+      @include pad
+        width: calc(100% / 2 - 20px)
+        margin-right: 35px
+        &:nth-child(2n)
+          margin-right: 0px
+      @include phone
+        width: 100%
+        margin-right: 0px
+
+      &:last-child
+        margin-right: 0px
+      &:hover,&:active
+        .img
+          filter: brightness(0.5)
+        .artContent
+          opacity: 1
+          border-top: 1px solid #fff
+          border-bottom: 1px solid #fff
+          padding: 15px 0px
+        .goArt
+          background-color: #fff
+          color: #343434
+          font-weight: bold
+    .img
+      height: 400px
+      background-position: center center
+      background-size: cover
+      transition: 0.5s
+.artContent
+  opacity: 0
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  color: #fff
+  text-align: center
+  transition: 0.5s
+  & h2
+    font-size: 30px
+    white-space: nowrap
+    font-weight: bold
+    margin-bottom: 10px
+  & p
+    margin-bottom: 40px
+    line-height: 1.5
+  .goArt
+    display: block
+    padding: 10px
+    border: 1px solid #fff
+    border-radius: 8px
+    color: #fff
+
+//連絡我們
+.contactConetnt
+  display: flex
+  box-shadow: 2px 4px 10px rgba(#A07B4B,0.3)
+  margin-bottom: 30px
+  @include phone
+    flex-wrap: wrap
+.map
+  width: 50%
+  @include phone
+    width: 100%
+.contact
+  width: 50%
+  padding: 20px 20px
+  border-top: 5px solid #8f642c
+  border-bottom: 5px solid #8f642c
+  @include phone
+    width: 100%
+  & label,input
+    display: block
+  & label
+    margin-bottom: 15px
+    font-weight: bold
+    font-size: 20px
+  & input
+    padding: 10px 0px 10px 10px
+    width: 100%
+    border: none
+    outline: 0
+    border-radius: 4px
+    color: #8f642c
+    margin-bottom: 15px
+    &:focus
+      box-shadow: 0px 0px 4px #8f642c
+  & textarea
+    color: #8f642c
+    border: none
+    outline: 0
+    width: 100%
+    height: 300px
+    padding: 10px 0px 10px 10px
+    resize: none
+    margin-bottom: 15px
+    &:focus
+      box-shadow: 0px 0px 4px #8f642c
+  .btn
+    padding: 10px 10px
+    border: 1px solid #8f642c
+    background-color: transparent
+    font-size: 20px
+    transition: 0.5s
+    &:hover,&:active
+      cursor: pointer
+      background-color: #8f642c
+      color: #fff

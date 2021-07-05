@@ -1,0 +1,57 @@
+.cartBanner
+  background-image: url(../public/img/cart.jpg)
+  height: 350px
+  background-position: center center
+  background-size: cover
+
+.cart
+  background-color: #EEE8DF
+  padding: 30px
+  @include phone
+    padding: 5px
+
+  .cartContent
+    max-width: 900px
+    margin: 0 auto
+
+  .step_step3
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 30px
+    @include phone
+      flex-wrap: wrap
+    & li
+      padding: 20px
+      border-radius: 8px
+      text-align: center
+      color: #a07b4b
+      @include phone
+        padding: 3px
+      @include smallPhone
+        width: 100%
+        margin-bottom: 10px
+      & span
+        font-size: 30px
+        font-weight: bold
+        margin-left: 10px
+        @include phone
+          font-size: 16px
+      .title
+        margin-bottom: 10px
+        font-size: 20px
+        @include phone
+          margin-bottom: 0
+      .text
+        font-size: 18px
+    .step1,.step2,.step3
+      background-color: #c6ae95
+      color: #fff
+    .front
+      font-size: 30px
+      color: #c6ae95
+      @include phone
+        display: none
+.ckeckPay
+  display: flex
+  justify-content: flex-end

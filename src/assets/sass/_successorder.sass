@@ -1,0 +1,88 @@
+.orderSuccess
+  display: flex
+  background-color: #F1EEEA
+  height: 100vh
+  @include pad
+    flex-wrap: wrap
+  .orderContent,.pic
+    width: 50%
+    @include pad
+      width: 100%
+  .pic
+    & img
+      object-fit: cover
+      width: 100%
+      height: 100vh
+      @include pad
+        height: 250px
+    @include pad
+      order: 1
+
+.orderContent
+  padding: 20px
+  background-color: #F1EEEA
+  @include pad
+    padding: 10px
+    order: 2
+  @include phone
+    padding-bottom: 20px
+  .text
+    padding: 20px
+    border-radius: 8px
+    font-size: 30px
+    font-weight: bold
+    border: 1px solid #c6ae95
+    color: #A07B4B
+    margin-bottom: 20px
+    & span
+      margin-left: 10px
+    & h2
+      font-weight: bold
+      margin-bottom: 10px
+  .content
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 400px
+    overflow-y: auto
+    margin-bottom: 20px
+  .content::-webkit-scrollbar
+    display: none
+  .content::-moz-scrollbar
+    display: none
+  .content::-ms-scrollbar
+    display: none
+
+  .table
+    width: 100%
+    & tr
+      border-top: 1px solid gray
+      font-size: 20px
+    & th
+      font-weight: bold
+      padding: 10px
+      @include pad
+        padding: 0
+        padding-top: 10px
+    & td
+      padding: 10px
+      vertical-align: middle
+      @include pad
+        font-size: 16px
+        padding: 0
+    & img
+      object-fit: cover
+      width: 100%
+      @include pad
+        padding-bottom: 10px
+  .total
+    text-align: right
+
+.continueShop
+  color: #fff
+  width: 200px
+  margin: 0 auto
+  border-radius: 4px
+  font-weight: bold
+  @include phone
+    padding: 10px

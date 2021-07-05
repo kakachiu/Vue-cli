@@ -1,0 +1,128 @@
+.cartBanner
+  background-image: url(../public/img/cart.jpg)
+  height: 350px
+  background-position: center center
+  background-size: cover
+.cart
+  background-color: #EEE8DF
+  padding: 30px
+
+  .cartContent
+    max-width: 900px
+    margin: 0 auto
+    @include phone
+      padding-bottom: 20px
+
+  .step_step1
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 30px
+    position: relative
+    @include phone
+      flex-wrap: wrap
+      margin-bottom: 20px
+    @include smallPhone
+      margin-bottom: 0
+    & li
+      padding: 20px
+      border-radius: 8px
+      text-align: center
+      color: #a07b4b
+      @include phone
+        padding: 3px
+      @include smallPhone
+        width: 100%
+        margin-bottom: 10px
+      & span
+        font-size: 30px
+        font-weight: bold
+        margin-left: 10px
+        @include phone
+          font-size: 16px
+      .title
+        margin-bottom: 10px
+        font-size: 20px
+        @include phone
+          margin-bottom: 0
+      .text
+        font-size: 18px
+    .step1
+      background-color: #c6ae95
+      color: #fff
+    .step2,.step3
+      border: 1px solid #c6ae95
+    .front
+      font-size: 30px
+      color: #c6ae95
+      @include phone
+        display: none
+
+  .table
+    width: 100%
+    margin-bottom: 30px
+    @include phone
+      width: 700px
+    & tr
+      border-top: 1px solid gray
+      font-size: 20px
+    & th
+      font-weight: bold
+      padding: 10px
+    & td
+      padding: 10px
+      vertical-align: middle
+      & img
+        object-fit: cover
+        height: 80px
+        width: 100px
+    .btn-danger:focus
+      box-shadow: none
+
+  .number
+    display: flex
+    justify-content: center
+    .btn-outline-primary:focus
+      box-shadow: none
+    .num
+      max-width: 100px
+      border: none
+      border-top: 1px solid #a07b4b
+      border-bottom: 1px solid #a07b4b
+      padding: 12px
+      font-weight: bold
+      color: #fff
+      background-color: rgba(#a07b4b,0.6)
+      font-size: 20px
+      text-align: center
+      &:focus
+        outline: 0
+.total
+  text-align: right
+
+.delete
+  color: #c93649
+  cursor: pointer
+  &:hover
+    color: #c4172e
+
+.otherBtn
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.prev
+  padding: 15px 20px
+  border-radius: 4px
+  transition: 0.5s
+  border: 1px solid #b78a54
+  font-weight: bold
+  color: #b78a54
+  &:hover
+    background-color: #A07B4B
+    color: #fff
+    cursor: pointer
+
+.tableOuter
+  @include phone
+    overflow-x: auto

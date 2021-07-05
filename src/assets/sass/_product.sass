@@ -1,0 +1,243 @@
+.product
+  background-color: #EEE8DF
+  padding: 30px
+  @include phone
+    padding: 20px
+  @include smallPhone
+    padding: 5px
+
+.productContent
+  margin-bottom: 20px
+  display: flex
+  position: relative
+  @include phone
+    flex-wrap: wrap
+  .pic,.info
+    width: 50%
+    @include phone
+      width: 100%
+  .pic
+    border: 2px solid #fff
+    padding: 10px
+    & img
+      object-fit: cover
+      width: 100%
+      height: 450px
+      @include phone
+        height: 200px
+  .info
+    padding: 10px 25px 0px 25px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    @include pad
+      padding-right: 0
+    @include phone
+      padding-left: 0
+    & h2
+      font-size: 30px
+      font-weight: bold
+      margin-bottom: 20px
+      @include pad
+      font-size: 25px
+    & p
+      font-size: 18px
+      line-height: 1.5
+      margin-bottom: 20px
+    .addProduct
+      display: flex
+      justify-content: space-between
+      align-items: center
+      @include pad
+      flex-wrap: wrap
+      .number
+        display: flex
+        align-items: center
+        margin-right: 10px
+        @include pad
+        margin-bottom: 15px
+        .btn.disabled
+          pointer-events: none
+        .num
+          max-width: 100px
+          border: none
+          padding: 13px
+          font-weight: bold
+          color: #fff
+          font-size: 20px
+          text-align: center
+          border-top: 1px solid #a07b4b
+          border-bottom: 1px solid #a07b4b
+          background-color: rgba(#a07b4b,0.6)
+          &:focus
+            outline: 0
+      .btn-outline-primary:focus
+        box-shadow: none
+      .price
+        font-size: 30px
+        font-weight: bold
+        @include smallPhone
+          font-size: 25px
+      .addbtn
+        padding: 15px 25px
+        background-color: #b78a54
+        border-radius: 8px
+        color: #fff
+        cursor: pointer
+        transition: 0.5s
+        @include pad
+        padding: 10px
+        &:hover
+          background-color: #7c582c
+  .back
+    position: absolute
+    bottom: -40px
+    left: 10px
+    font-size: 25px
+    padding-bottom: 3px
+    @include smallPhone
+      bottom: -30px
+    & .span
+      margin-left: 10px
+      font-weight: bold
+      color: #b78a54
+
+    & i
+      position: absolute
+      color: #b78a54
+      left: -5px
+      top: 7px
+      transition: 0.5s left
+    &:hover
+      cursor: pointer
+      i
+        left: -15px
+        color: #7c582c
+      a.span
+        color: #7c582c
+
+.type
+  background-color: #F1EEEA
+  padding: 30px
+  .title
+    position: relative
+    margin-bottom: 50px
+  .twTitle
+    padding: 10px
+    width: 160px
+    height: 80px
+    color: #fff
+    background-color: #a07b4b
+    font-size: 55px
+    & span
+      position: absolute
+      white-space: nowrap
+      font-size: 20px
+      margin-left: 5px
+  .enTitle
+    position: absolute
+    left: 65px
+    top: 40px
+    font-size: 60px
+    font-weight: bold
+    width: 190px
+    height: 70px
+    background-color: #fff
+    padding-left: 5px
+    & span
+      font-size: 30px
+
+.paintingContent
+  display: flex
+  flex-wrap: wrap
+  & li
+    margin-right: 20px
+    margin-bottom: 30px
+    box-shadow: 5px 5px 10px rgba(#A07B4B,0.3)
+    position: relative
+    border-radius: 4px
+    &:hover
+      .more
+        opacity: 1
+        padding: 10px 0px
+        border-top: 1px solid #fff
+        border-bottom: 1px solid #fff
+      .img
+        filter: brightness(0.5)
+    .img
+      transition: 0.5s
+      & img
+        object-fit: cover
+        width: 100%
+        height: 300px
+        border-radius: 4px 4px 0px 0px
+    .more
+      position: absolute
+      top: 30%
+      left: 50%
+      transform: translate(-50%,-50%)
+      font-size: 30px
+      color: #fff
+      opacity: 0
+      transition: 0.5s
+      @include smallPhone
+        font-size: 20px
+    .tag
+      position: absolute
+      right: 10px
+      top: 10px
+      padding: 10px
+      border-radius: 8px
+      border: 1px solid #EEE8DF
+      color: #EEE8DF
+      background-color: #A07B4B
+      font-weight: 600
+      font-size: 18px
+  .content
+    padding: 20px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 200px
+    @include phone
+      height: auto
+      padding: 10px
+    h2
+      font-size: 30px
+      font-weight: bold
+      margin-bottom: 10px
+      @include phone
+        font-size: 25px
+      @include smallPhone
+        font-size: 20px
+
+    p
+      margin-bottom: 40px
+  .addtoCart
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @include phone
+      flex-wrap: wrap
+    .price
+      font-weight: bold
+      font-size: 25px
+      @include phone
+        font-size: 20px
+        width: 100%
+        margin-bottom: 10px
+      @include smallPhone
+        margin-bottom: 10px
+        font-size: 18px
+    .btn
+      border: 1px solid #A07B4B
+      border-radius: 4px
+      padding: 10px
+      color: #A07B4B
+      transition: 0.5s
+      @include phone
+        padding: 5px
+        width: 100%
+      &:hover
+        color: #fff
+        background-color: #A07B4B

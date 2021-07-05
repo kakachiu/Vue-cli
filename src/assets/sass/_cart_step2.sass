@@ -1,0 +1,166 @@
+.cartBanner
+  background-image: url(../public/img/cart.jpg)
+  height: 350px
+  background-position: center center
+  background-size: cover
+
+.cart
+  background-color: #EEE8DF
+  padding: 30px
+
+  .cartContent
+    max-width: 900px
+    margin: 0 auto
+    @include phone
+      padding-bottom: 20px
+
+  .step_step2
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 30px
+    @include phone
+      flex-wrap: wrap
+      margin-bottom: 20px
+    @include smallPhone
+      margin-bottom: 0
+    & li
+      padding: 20px
+      border-radius: 8px
+      text-align: center
+      color: #a07b4b
+      @include phone
+        padding: 3px
+      @include smallPhone
+        width: 100%
+        margin-bottom: 10px
+      & span
+        font-size: 30px
+        font-weight: bold
+        margin-left: 10px
+        @include phone
+          font-size: 16px
+      .title
+        margin-bottom: 10px
+        font-size: 20px
+        @include phone
+          margin-bottom: 0
+      .text
+        font-size: 18px
+    .step1,.step2
+      background-color: #c6ae95
+      color: #fff
+    .step3
+      border: 1px solid #c6ae95
+    .front
+      font-size: 30px
+      color: #c6ae95
+      @include phone
+        display: none
+
+  .listTitle
+    text-align: center
+    background-color: #A07B4B
+    color: #fff
+    padding: 10px
+    font-size: 20px
+    border-radius: 8px
+    margin-bottom: 10px
+  .table
+    width: 100%
+    margin-bottom: 30px
+    @include phone
+      width: 700px
+    & tr
+      border-top: 1px solid gray
+      font-size: 20px
+    & th
+      font-weight: bold
+      padding: 10px
+    & td
+      padding: 10px
+      vertical-align: middle
+      & img
+        object-fit: cover
+        width: 80px
+  .total
+    text-align: right
+
+.otherBtn
+  display: flex
+  justify-content: space-between
+
+.prev
+  padding: 15px 20px
+  border-radius: 4px
+  color: #fff
+  transition: 0.5s
+  border: 1px solid #b78a54
+  font-weight: bold
+  color: #b78a54
+  &:hover
+    background-color: #A07B4B
+    color: #fff
+    cursor: pointer
+
+// 表單
+.order
+  & label,input,select,textarea
+    display: block
+    font-size: 16px
+  & label
+    font-size: 20px
+    font-weight: bold
+    margin-bottom: 5px
+  & input
+    width: 100%
+    padding: 10px
+    border: none
+    margin-bottom: 5px
+    border-radius: 4px
+    color: #8f642c
+    &:focus
+      outline: 0
+      box-shadow: 0px 0px 4px #8f642c
+    &::placeholder
+      color: #8f642c
+
+  & select,textarea
+    width: 100%
+    padding: 10px
+    color: #8f642c
+    margin-bottom: 5px
+    &:focus
+      outline: 0
+      box-shadow: 0px 0px 4px #8f642c
+  & select
+    border: none
+    border-radius: 4px
+    appearance: none
+    background-image: url(../public/img/select_arrow.png)
+    background-repeat: no-repeat
+    background-position: right
+  & textarea
+    border-radius: 4px
+    border: none
+    resize: none
+    height: 200px
+    margin-bottom: 25px
+    &::placeholder
+      color: #8f642c
+.tableOuter
+  @include phone
+    overflow-x: auto
+
+// 按鈕
+.nextBtn
+  background-color: #c93649
+  transition: 0.5s
+  .btn-danger:focus
+    box-shadow: none
+  &:hover
+    background-color: #c4172e
+    cursor: pointer
+.not
+  &:hover
+    cursor: not-allowed

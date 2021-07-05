@@ -1,0 +1,131 @@
+.headerMenu
+  background-color: #F1EEEA
+  padding: 10px 0px
+  .content
+    display: flex
+    justify-content: space-between
+    align-items: center
+.brandLogo
+  & a
+    display: block
+    width: 134px
+    height: 97px
+    text-indent: 101%
+    white-space: nowrap
+    overflow: hidden
+    background-image: url(../public/img/logo.png)
+
+//手機 menu
+.outerMenu
+  position: absolute
+  right: 20px
+  top: 20px
+  display: none
+  @include phone
+    display: block
+  .showMenu
+    width: 50px
+    height: 50px
+    border: 1px solid #c6ae95
+    border-radius: 50%
+    position: relative
+    .line1,.line2,.line3
+      position: absolute
+      width: 30px
+      height: 2px
+      background-color: #c6ae95
+      top: 50%
+      left: 50%
+      transition: all 0.5s
+    .line1
+      transform: translate(-50%,-400%)
+    .line2
+      transform: translate(-50%,-30%)
+    .line3
+      transform: translate(-50%,400%)
+.openmenu .menu
+  max-height: 500px
+.openmenu .showMenu
+  .line2
+    display: none
+  .line1
+    transform: translate(-50%,-50%) rotate(45deg)
+  .line3
+    transform: translate(-50%,-50%) rotate(-45deg)
+
+//桌機 menu
+.menu
+  display: flex
+  @include phone
+    flex-wrap: wrap
+    max-height: 0
+    overflow: hidden
+    position: absolute
+    top: 110px
+    left: 0
+    right: 0
+    z-index: 3
+    transition: 1.5s
+  & li
+    margin-right: 20px
+    border-top: 1px solid
+    border-bottom: 1px solid
+    padding: 10px
+    position: relative
+    transition: width 0.5s
+    @include phone
+      width: 100%
+      margin-right: 0px
+      border-top: 1px solid #fff
+      border-bottom: 1px solid #fff
+      background-color: #F1EEEA
+    & a
+      display: block
+
+    &:last-child
+      margin-right: 0px
+    & span
+      z-index: 2
+      display: block
+      position: relative
+      color: #343434
+      font-size: 18px
+      font-weight: 700
+      line-height: 22px
+      text-align: center
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      width: 0%
+      z-index: 1
+      opacity: 0
+      background-color: #c6ae95
+      transition: width 0.5s
+    &:hover
+      border-top: 1px solid #fff
+      border-bottom: 1px solid #fff
+      & span
+        color: #fff
+        font-weight: 500
+    &:hover::before
+      opacity: 1
+      width: 100%
+
+.shopNum
+  position: absolute
+  top: -41px
+  left: 76px
+  width: 30px
+  height: 30px
+  transform: rotate(10deg)
+  box-shadow: 3px 3px 5px rgba(grey,0.5)
+  @include phone
+    top: -41px
+    left: 215px
+  @include smallPhone
+    top: -41px
+    left: 188px
