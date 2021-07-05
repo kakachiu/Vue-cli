@@ -21,4 +21,4 @@ npm run lint
 ```
 
 ### 網站
-https://kakachiu.github.io/vueCli/#/
+https://kakachiu.github.io/Vue-cli/
